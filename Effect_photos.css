@@ -1,0 +1,74 @@
+/* Style général */
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000b1;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.photo {
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 200px; /* L'image s'adaptera dynamiquement à la largeur du conteneur */
+}
+
+.photo img {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo img:hover {
+    transform: scale(1.1);
+}
+
+.gallery_B {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.gallery_B img {
+    max-width: 500px;
+    height: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+    .photo {
+        flex-basis: 50%; /* Deux images par ligne sur les écrans de taille moyenne */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .photo {
+        flex-basis: 100%; /* Une image par ligne sur les petits écrans */
+    }
+}
+.lamp-light {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 100px;
+    background-color: #d7d3bd;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #fddc6f;
+}
+.lamp-night {
+    position: absolute;
+   
+    left: 10px;
+    width: 80px;
+    height: 100px;
+    background-color: #0f0e0e;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #4d4c4a;
+}
